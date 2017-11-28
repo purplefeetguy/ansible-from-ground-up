@@ -67,15 +67,15 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-  config.vm.define "serverCentos01" do |serverCentos01|
-    serverCentos01.vm.hostname = "serverCentos01"
-    serverCentos01.vm.network "private_network", ip: "192.168.33.101"
+  config.vm.define "serverAnsible" do |serverAnsible|
+    serverAnsible.vm.hostname = "serverAnsible"
+    serverAnsible.vm.network "private_network", ip: "192.168.33.100"
   end
   config.vm.define "serverCentos01" do |serverCentos01|
     serverCentos01.vm.hostname = "serverCentos01"
     serverCentos01.vm.network "private_network", ip: "192.168.33.101"
   end
-  config.vm.define "serverCentos" do |serverCentos02|
+  config.vm.define "serverCentos02" do |serverCentos02|
     serverCentos02.vm.hostname = "serverCentos02"
     serverCentos02.vm.network "private_network", ip: "192.168.33.102"    
   end
